@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/mycss.css"
+	th:href="@{/css/mycss.css}" />
+</head>
+<body>
+<h1>This is a Thymeleaf Test Page</h1>
+<h3 th:text="'Hello, ' + ${myMessage}">Display Here</h3>
+<p>
+This is a random message for <span th:text="${myMessage}">Name here</span>.  And I want to add some more text here.
+</p>
+<p>
+This is a fast way to display the message [[${myMessage}]]
+</p>
+
+<span th:text="${myList}"></span>
+<h3>List of Names</h3>
+<ol>
+<li th:each="meow : ${myList}" th:text="${meow}"></li>
+</ol>
+
+<table>
+	<tr>
+		<th>Names</th>
+	</tr>
+	<tr th:each="meow : ${myList}">
+		<td th:text="${meow}"> Name 1</td>
+	</tr>
+</table>
+
+<img th:src="@{ /images/smiley.jpg}" src="../static/images/smiley.jpg"/>
+<a href="@{/test}">Click</a>
+</body>
+</html>

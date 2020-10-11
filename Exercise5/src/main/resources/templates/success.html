@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="BIG5">
+<title>Welcome</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/mycss.css"
+	th:href="@{/css/mycss.css}" />
+</head>
+<body>
+<h1>Student Information</h1>
+
+<form action="/information" method="get">
+	Name: <input type="text" name="name"><br/>
+	ID: <input type="text" name="id"><br/><br/>
+	
+	Course 1: <input type="text" name="c1"><br/>
+	Course 2: <input type="text" name="c2"><br/>
+	Course 3: <input type="text" name="c3"><br/>
+	Course 4: <input type="text" name="c4"><br/><br/>
+	
+	<input type="checkbox" name="isCoop">co-op<br/>
+	<input type="checkbox" name="isFulltime">full time student<br/>
+	<input type="checkbox" name="isPaid">paid tuition<br/><br/>
+	<input type="submit" value="Submit">
+</form>
+<a href="/viewStudents">View Student Info</a>
+</body>
+</html>
