@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="BIG5">
+<title>View Drinks</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/myEx7css.css"
+	th:href="@{/css/myEx7css.css}" />
+</head>
+<body>
+<h1>Drinks</h1>
+
+<table border="1">
+	<tr>
+		<th>Drink Name</th>
+		<th>Main</th>
+		<th>Amount1</th>
+		<th>Second</th>
+		<th>Amount2</th>
+		<th>Directions</th>
+	</tr>
+	
+	<tr th:each="drink : ${drinks}">
+		<td th:text="${drink.drink_name}"></td>
+		<td th:text="${drink.main}"></td>
+		<td th:text="${drink.amount1}"></td>
+		<td th:text="${drink.second}"></td>
+		<td th:text="${drink.amount2}"></td>
+		<td th:text="${drink.directions}"></td>
+	</tr>
+</table>
+
+<a href="/">Add Drink</a>
+</body>
+</html>

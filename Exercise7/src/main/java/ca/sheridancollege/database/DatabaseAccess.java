@@ -29,7 +29,7 @@ public class DatabaseAccess {
 	public void addDrink(Drink drink) {
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		String query = "INSERT INTO easy_drinks VALUES (:name, :main, :a1, :sec, :a2, :dir)";
-		parameters.addValue("name", drink.getName());
+		parameters.addValue("name", drink.getDrink_name());
 		parameters.addValue("main", drink.getMain());
 		parameters.addValue("a1", drink.getAmount1());
 		parameters.addValue("sec", drink.getSecond());
@@ -45,8 +45,8 @@ public class DatabaseAccess {
 		List<Map<String,Object>> rows = jdbc.queryForList(query, new HashMap<String,Object>());
 		for (Map<String,Object> row : rows) {
 			Drink d = new Drink();
-			d.setName((String)row.get("drink_name"));
-			d.setName((String)row.get("main"));
+			d.setDrink_name((String)row.get("drink_name"));
+			d.setDrink_name((String)row.get("main"));
 			d.setAmount1(((BigDecimal)row.get("amount1")).doubleValue());
 			d.setSecond((String)row.get("second"));
 			d.setAmount2((Double)row.get("amount2"));
