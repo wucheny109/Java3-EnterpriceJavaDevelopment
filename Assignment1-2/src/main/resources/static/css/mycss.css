@@ -1,0 +1,60 @@
+body{
+	text-align:center;
+}
+
+table{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+th {
+  background-color: darkblue;
+  color: white;
+}
+
+tr:nth-child(odd) {
+	background-color:lightgray
+}
+tr:nth-child(even) {
+	background-color:white
+}
+
+h1{
+	text-shadow: 1px 2px 4px blue;
+}
+
+.Data-Content{
+	line-height:25px;
+}
+
+.Data-Title{
+	float: left;
+	width: 45%;
+}
+
+.Data-Items{
+	float: left;
+	width: 12%;
+}
+
+.AlignRight{
+	text-align: right;
+}
+
+.NoFloat{
+	clear:both;
+}
+
+a:link, a:visited {
+  	background-color: lightblue;
+  	color: black;
+  	padding: 5px 10px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+}
+
+a:hover, a:active {
+	color: white;
+  	background-color: blue;
+}
